@@ -1,0 +1,23 @@
+# Disk DescriptorFile
+version=1
+encoding="UTF-8"
+CID=281749ca
+parentCID=ffffffff
+isNativeSnapshot="no"
+createType="twoGbMaxExtentSparse"
+
+# Extent description
+RW 8304640 SPARSE "Debian 7.x 64-bit-s001.vmdk"
+RW 8304640 SPARSE "Debian 7.x 64-bit-s002.vmdk"
+RW 4362240 SPARSE "Debian 7.x 64-bit-s003.vmdk"
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "lsilogic"
+ddb.geometry.cylinders = "1305"
+ddb.geometry.heads = "255"
+ddb.geometry.sectors = "63"
+ddb.longContentID = "07c5828d9876848b9f416591281749ca"
+ddb.uuid = "60 00 C2 97 9e ce 79 41-52 85 3f ed de 83 48 41"
+ddb.virtualHWVersion = "11"
