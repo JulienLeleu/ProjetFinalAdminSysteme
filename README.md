@@ -1,12 +1,11 @@
 # ProjetFinalAdminSysteme
-## Petit réseau composé de 4 machines virtuelles l'une agissant comme serveur, les deux autres comme clientes.
+## Petit réseau composé de 4 machines virtuelles l'une agissant comme serveur, les trois autres comme clientes.
 ### Julien LELEU
 
 --------
 
 # Sommaire
 - Le Serveur
-    - Installation du serveur
     - Configuration du DNS
     - Hostname
     - Bind9
@@ -19,7 +18,6 @@
       - Installation du Serveur NFS
       - Test Montage NFS
 - Le Client Debian
-  - Installation de la machine Debian
   - Configuration de l'adresse IP
   - Installation et Configuration Montage NFS
     - Configuration du LDAP et NSS
@@ -32,7 +30,6 @@
     - Clavier Virtuel
     - Loupe
 - Le Client ArchLinux
-  - Installation de la machine ArchLinux
   - Configuration de l'adresse IP
   - Installation et Configuration du LDAP
   - NFS auto-mount
