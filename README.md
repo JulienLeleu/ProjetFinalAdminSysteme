@@ -220,7 +220,7 @@ ldapadd -c -x -D cn=admin,dc=da2i,dc=org -W -f /var/tmp/user1.ldif
   - Définissez lui un mot de passe, avec la commande:
 
 ```
-ldappasswd -x -D cn=admin,dc=da2i,dc=org -W -S uid=vandenbm,ou=users,dc=da2i,dc=org
+ldappasswd -x -D cn=admin,dc=da2i,dc=org -W -S uid=robert,ou=users,dc=da2i,dc=org
 ```
 
 ### Suppression d'utilisateurs
