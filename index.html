@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>README</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); overflow: auto; background-color: rgb(40, 44, 52); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+
+pre.editor-colors,
+.host {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #abb2bf;
+}
+.comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.entity.name.type {
+  color: #e5c07b;
+}
+.entity.other.inherited-class {
+  color: #98c379;
+}
+.keyword {
+  color: #c678dd;
+}
+.keyword.control {
+  color: #c678dd;
+}
+.keyword.operator {
+  color: #abb2bf;
+}
+.keyword.other.special-method {
+  color: #61afef;
+}
+.keyword.other.unit {
+  color: #d19a66;
+}
+.storage {
+  color: #c678dd;
+}
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #c678dd;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #abb2bf;
+}
+.constant {
+  color: #d19a66;
+}
+.constant.variable {
+  color: #d19a66;
+}
+.constant.character.escape {
+  color: #56b6c2;
+}
+.constant.numeric {
+  color: #d19a66;
+}
+.constant.other.color {
+  color: #56b6c2;
+}
+.constant.other.symbol {
+  color: #56b6c2;
+}
+.variable {
+  color: #e06c75;
+}
+.variable.interpolation {
+  color: #be5046;
+}
+.variable.parameter {
+  color: #abb2bf;
+}
+.string {
+  color: #98c379;
+}
+.string.regexp {
+  color: #56b6c2;
+}
+.string.regexp .source.ruby.embedded {
+  color: #e5c07b;
+}
+.string.other.link {
+  color: #e06c75;
+}
+.punctuation.definition.comment {
+  color: #5c6370;
+}
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
+.punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
+.punctuation.definition.array {
+  color: #abb2bf;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #61afef;
+}
+.punctuation.definition.bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #be5046;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #abb2bf;
+}
+.support.class {
+  color: #e5c07b;
+}
+.support.type {
+  color: #56b6c2;
+}
+.support.function {
+  color: #56b6c2;
+}
+.support.function.any-method {
+  color: #61afef;
+}
+.entity.name.function {
+  color: #61afef;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #e5c07b;
+}
+.entity.name.section {
+  color: #61afef;
+}
+.entity.name.tag {
+  color: #e06c75;
+}
+.entity.other.attribute-name {
+  color: #d19a66;
+}
+.entity.other.attribute-name.id {
+  color: #61afef;
+}
+.meta.class {
+  color: #e5c07b;
+}
+.meta.class.body {
+  color: #abb2bf;
+}
+.meta.method-call,
+.meta.method {
+  color: #abb2bf;
+}
+.meta.definition.variable {
+  color: #e06c75;
+}
+.meta.link {
+  color: #d19a66;
+}
+.meta.require {
+  color: #61afef;
+}
+.meta.selector {
+  color: #c678dd;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.meta.tag {
+  color: #abb2bf;
+}
+.none {
+  color: #abb2bf;
+}
+.invalid.deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.invalid.illegal {
+  color: #ffffff !important;
+  background-color: #e05252 !important;
+}
+.markup.bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #c678dd;
+}
+.markup.deleted {
+  color: #e06c75;
+}
+.markup.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #61afef;
+}
+.markup.inserted {
+  color: #98c379;
+}
+.markup.list {
+  color: #e06c75;
+}
+.markup.quote {
+  color: #d19a66;
+}
+.markup.raw {
+  color: #98c379;
+}
+.source.cs .keyword.operator {
+  color: #c678dd;
+}
+.source.css .property-name,
+.source.css .property-value {
+  color: #828997;
+}
+.source.css .property-name.support,
+.source.css .property-value.support {
+  color: #abb2bf;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .markup.heading {
+  color: #e06c75;
+}
+.source.gfm .markup.link {
+  color: #c678dd;
+}
+.source.gfm .link .entity {
+  color: #61afef;
+}
+.source.ini .keyword.other.definition.ini {
+  color: #e06c75;
+}
+.source.java .storage.modifier.import {
+  color: #e5c07b;
+}
+.source.java .storage.type {
+  color: #e5c07b;
+}
+.source.java-properties .meta.key-pair {
+  color: #e06c75;
+}
+.source.java-properties .meta.key-pair > .punctuation {
+  color: #abb2bf;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #98c379;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #56b6c2;
+}
+.source.ruby .constant.other.symbol > .punctuation {
+  color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #c678dd;
+}
+.source.python .variable.parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h1 id="projetfinaladminsysteme">ProjetFinalAdminSysteme</h1>
+<h2 id="petit-service-ldap-compos-de-4-machines-virtuelles-l-une-agissant-comme-serveur-les-trois-autres-comme-clientes-">Petit service LDAP composé de 4 machines virtuelles l&#39;une agissant comme serveur, les trois autres comme clientes.</h2>
+<h3 id="julien-leleu">Julien LELEU</h3>
+<hr>
+<h1 id="sommaire">Sommaire</h1>
+<ul>
+<li>Le Serveur<ul>
+<li>Installation du serveur</li>
+<li>Configuration du DNS</li>
+<li>Hostname</li>
+<li>Bind9</li>
+<li>LDAP</li>
+<li>Serveur NFS</li>
+</ul>
+</li>
+<li>Le Client Debian<ul>
+<li>Installation et Configuration Montage NFS</li>
+<li>Configuration du LDAP et NSS</li>
+<li>Configuration du PAM</li>
+<li>Configuration du fstab</li>
+</ul>
+</li>
+</ul>
+<h1 id="serveur">Serveur</h1>
+<h2 id="installation-du-serveur">Installation du serveur</h2>
+<ul>
+<li>Dans un premier temps, munissez-vous du fichier mini-debian.iso disponible à l&#39;adresse suivante : <a href="http://ftp.nl.debian.org/debian/dists/jessie/main/installer-amd64/current/images/netboot/">http://ftp.nl.debian.org/debian/dists/jessie/main/installer-amd64/current/images/netboot/</a></li>
+</ul>
+<p>Lancez l&#39;installation avec VMWare.</p>
+<h2 id="configuration-lors-de-l-installation">Configuration lors de l&#39;installation</h2>
+<ul>
+<li>Lors de l&#39;installation, respectez les paramètres suivants:</li>
+</ul>
+<h3 id="param-tres-de-la-machine">Paramètres de la machine</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parametre</th>
+<th style="text-align:left">valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Nom de la machine</strong></td>
+<td style="text-align:left">server</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Nom du domaine</strong></td>
+<td style="text-align:left">da2i.org</td>
+</tr>
+</tbody>
+</table>
+<h3 id="miroir">Miroir</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parametre</th>
+<th style="text-align:left">valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Pays</strong></td>
+<td style="text-align:left">France</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Package</strong></td>
+<td style="text-align:left">debian.polytech-lille.fr</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Proxy</strong></td>
+<td style="text-align:left"><a href="http://cache.univ-lille1.fr:3128">http://cache.univ-lille1.fr:3128</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mot de passe super utilisateur</strong></td>
+<td style="text-align:left">root</td>
+</tr>
+</tbody>
+</table>
+<p>Installez automatiquement le disque dur(partitionnement automatique, fichiers multipliés avec repertoire /home séparé)</p>
+<h3 id="configuration-dns">Configuration DNS</h3>
+<p>Modifiez le fichier <code>/etc/network/interfaces</code> avec ces paramètres:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>auto&nbsp;eth0</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>iface&nbsp;eth0&nbsp;&nbsp;inet&nbsp;static</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>address&nbsp;192.168.194.10</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>netmask&nbsp;255.255.255.0</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>gateway&nbsp;192.168.194.2</span></span></span></div></pre><p>Pour relancer la configuration rebootez la machine ou relancez le service à l&#39;aide de la commande suivante: <code>/etc/init.d/networking restart</code></p>
+<h3 id="hostname">Hostname</h3>
+<ul>
+<li>Lancez la commande <code>echo &quot;server&quot; &gt; /etc/hostname</code> pour changer le nom de l&#39;hote</li>
+<li><p>Editez le fichier <code>/etc/hosts</code> et remplacez cette ligne <code>127.0.0.1 server.XXXXX server</code> par <code>192.168.194.10 server.da2i.org server</code></p>
+<p>Une fois les modifications effectuées, redémarrez le service <code>networking</code></p>
+</li>
+</ul>
+<h2 id="bind9">Bind9</h2>
+<p>Installez le paquet correspondant à <strong>bind9</strong> si celui-ci n&#39;est pas déjà installé.</p>
+<ul>
+<li>Editez le fichier <code>/etc/bind/named.conf.options</code>, insérez l&#39;IP de VmPlayer et le DNS de l&#39;université :</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>forwarders&nbsp;{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>192.168.194.2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#IP&nbsp;de&nbsp;vmPlayer</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;172.18.48.31;&nbsp;&nbsp;&nbsp;&nbsp;#DNS&nbsp;Universite</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>};</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>dnssec-validation&nbsp;no;&nbsp;#A&nbsp;modifier&nbsp;dans&nbsp;le&nbsp;fichier</span></span></span></div></pre><ul>
+<li>Editez le fichier <code>/etc/bind/named.conf.local</code> :</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>zone&nbsp;&quot;da2i.org&quot;&nbsp;{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>type&nbsp;master;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;&quot;/etc/bind/zones/db.da2i.org&quot;;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>};</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>zone&nbsp;&quot;194.168.192.in-addr.arpa&quot;&nbsp;{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>type&nbsp;master;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;&quot;/etc/bind/zones/db.192&quot;;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>};</span></span></span></div></pre><ul>
+<li><p>Créez le dossier <code>/etc/bind/zones</code>. Créez ensuite les fichiers <code>db.da2i.org</code> et <code>db.192</code> dans ce repertoire en y copiant respectivement le contenu de <code>/etc/bind/db.local</code> et <code>/etc/bind/db.127</code>.</p>
+</li>
+<li><p>Editez le fichier <code>/etc/bind/zones/db.da2i.org</code> avec ces informations:</p>
+</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;&nbsp;BIND&nbsp;data&nbsp;file&nbsp;for&nbsp;local&nbsp;loopback&nbsp;interface</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$TTL&nbsp;&nbsp;&nbsp;&nbsp;604800</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.da2i.org.&nbsp;webuser.da2i.org.&nbsp;(</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Serial</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>604800&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Refresh</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>86400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Retry</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>2419200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Expire</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>604800&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Negative&nbsp;Cache&nbsp;TTL</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>da2i.org.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.da2i.org.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>da2i.org.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.194.10</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localhost.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;127.0.0.1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAAA&nbsp;&nbsp;&nbsp;&nbsp;::1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>server&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.194.10</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>gateway&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.194.2</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>debian&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.194.20</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>archlinux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.194.30</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>freebsd&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.194.40</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>www&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CNAME&nbsp;&nbsp;&nbsp;da2i.org.</span></span></span></div></pre><ul>
+<li>Editez le fichier <code>/etc/bind/zones/db.192</code> avec ces informations:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;&nbsp;BIND&nbsp;reverse&nbsp;data&nbsp;file&nbsp;for&nbsp;local&nbsp;loopback&nbsp;interface</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>$TTL&nbsp;&nbsp;&nbsp;&nbsp;604800</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.da2i.org.&nbsp;webuser.da2i.org.&nbsp;(</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Serial</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>604800&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Refresh</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>86400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Retry</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>2419200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Expire</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>604800&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;Negative&nbsp;Cache&nbsp;TTL</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localhost.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>;1.0.0&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localhost.</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gateway.da2i.org.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.da2i.org.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;debian.da2i.org.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;archlinux.da2i.org.</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PTR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;freebsd.da2i.org.</span></span></span></div></pre><ul>
+<li>Editez le fichier <code>/etc/resolv.conf</code> avec ces informations:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>domain&nbsp;da2i.org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>search&nbsp;da2i.org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>nameserver&nbsp;192.168.194.10</span></span></span></div></pre><ul>
+<li>Ajoutez au fichier <code>/etc/network/interfaces</code> la ligne suivante: <code>dns-nameservers 192.168.194.10</code>.</li>
+</ul>
+<p>Redémarrez ensuite le service bind9.</p>
+<h2 id="configuration-de-ldap">Configuration de LDAP</h2>
+<ul>
+<li>Avant toute chose, installez les paquets <code>slapd ldap-utils</code>.
+Pour installer et configurer facilement LDAP, suivez le tutoriel du site <a href="http://uid.free.fr/Ldap/ldap.html">http://uid.free.fr/Ldap/ldap.html</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Paramètres</strong></th>
+<th style="text-align:left">valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Omit OpenLDAP server configuration ?</td>
+<td style="text-align:left">No</td>
+</tr>
+<tr>
+<td style="text-align:left">DNS domain name</td>
+<td style="text-align:left">da2i.org</td>
+</tr>
+<tr>
+<td style="text-align:left">Administrator password</td>
+<td style="text-align:left">root</td>
+</tr>
+<tr>
+<td style="text-align:left">Confirm password</td>
+<td style="text-align:left">root</td>
+</tr>
+<tr>
+<td style="text-align:left">Database backend to use</td>
+<td style="text-align:left">HDB</td>
+</tr>
+<tr>
+<td style="text-align:left">Do you want the database to be removed when slapd is purged?</td>
+<td style="text-align:left">No</td>
+</tr>
+<tr>
+<td style="text-align:left">Allow LDAPv2 protocol?</td>
+<td style="text-align:left">No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cr-ation-de-l-arbre-ldap">Création de l&#39;arbre LDAP</h3>
+<ul>
+<li>Créez le fichier <code>ou.ldif</code> dans le dossier <code>/var/tmp</code> et insérez le contenu ci-dessous:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>dn:&nbsp;ou=users,dc=da2i,dc=org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>ou:&nbsp;users</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>objectClass:&nbsp;organizationalUnit</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>dn:&nbsp;ou=groupes,dc=da2i,dc=org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>ou:&nbsp;groupes</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>objectClass:&nbsp;organizationalUnit</span></span></span></div></pre><ul>
+<li><p>Effectuez la commande <code>invoke-rc.d slapd stop</code> pour eteindre le serveur suivi de <code>slapadd -c -v -l /var/tmp/ou.ldif</code> pour charger le fichier précédent.</p>
+<h3 id="cr-ation-des-utilisateurs">Création des utilisateurs</h3>
+</li>
+<li><p>Pour cet exemple, nous appelerons cet utilisateur <code>robert</code>. Créez un fichier nommé <code>user1.ldif</code> dans le repertoire <code>/var/tmp</code> et y insérer le code suivant:</p>
+</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>dn:&nbsp;cn=robert,ou=groupes,dc=da2i,dc=org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>cn:&nbsp;robert</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>gidNumber:&nbsp;1001</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>objectClass:&nbsp;top</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>objectClass:&nbsp;posixGroup</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>dn:&nbsp;uid=robert,ou=users,dc=da2i,dc=org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>uid:&nbsp;robert</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>uidNumber:&nbsp;1001</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>gidNumber:&nbsp;1001</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>cn:&nbsp;robert</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>sn:&nbsp;robert</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>objectClass:&nbsp;top</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>objectClass:&nbsp;person</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>objectClass:&nbsp;posixAccount</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>objectClass:&nbsp;shadowAccount</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>loginShell:&nbsp;/bin/bash</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>homeDirectory:&nbsp;/home/robert</span></span></span></div></pre><ul>
+<li>Ensuite, pour l&#39;ajouter au serveur LDAP, effectuez la commande:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>ldapadd&nbsp;-c&nbsp;-x&nbsp;-D&nbsp;cn=admin,dc=da2i,dc=org&nbsp;-W&nbsp;-f&nbsp;/var/tmp/user1.ldif</span></span></span></div></pre><ul>
+<li>Définissez lui un mot de passe, avec la commande:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>ldappasswd&nbsp;-x&nbsp;-D&nbsp;cn=admin,dc=da2i,dc=org&nbsp;-W&nbsp;-S&nbsp;uid=robert,ou=users,dc=da2i,dc=org</span></span></span></div></pre><h3 id="suppression-d-utilisateurs">Suppression d&#39;utilisateurs</h3>
+<ul>
+<li><p>Si comme moi, il vous est arrivé malencontreusement de faire des erreurs lors de l&#39;ajout d&#39;un utilisateur, de faire une faute dans le nom ou encore d&#39;oublier de changer le gid/uid pour chaque utilisateur, il existe une solution pour supprimer un utilisateur ainsi que son groupe.</p>
+</li>
+<li><p>Pour supprimer un utilisateur, effectuez la commande suivante:</p>
+</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>ldapdelete&nbsp;-c&nbsp;-x&nbsp;-D&nbsp;cn=admin,dc=da2i,dc=org&nbsp;-W&nbsp;&quot;uid=robert,dc=da2i,&nbsp;dc=org&quot;</span></span></span></div></pre><ul>
+<li>Pour supprimer son groupe, effectuez la commande suivante:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>ldapdelete&nbsp;-c&nbsp;-x&nbsp;-D&nbsp;cn=admin,dc=da2i,dc=org&nbsp;-W&nbsp;&quot;cn=robert,ou=groupes,dc=da2i,&nbsp;dc=org&quot;</span></span></span></div></pre><h2 id="serveur-nfs">Serveur NFS</h2>
+<ul>
+<li>Installez le paquet <code>nfs-kernel-server</code>.</li>
+<li>Editez le fichier <code>/etc/exports</code> avec le code suivant:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>/srv/serveur&nbsp;*.da2i.org(rw,sync,no_subtree_check)</span></span></span></div></pre><ul>
+<li>(Re) Lancez le service <code>nfs-kernel-server</code></li>
+<li>Sur le serveur, créez le repertoire <code>/srv/home</code> qui contiendra les dossiers home de tous les utilisateurs LDAP</li>
+<li>Pour chaque utilisateur, créez un repertoire <code>/srv/home/&lt;NomUtilisateur&gt;</code></li>
+<li>Sur le client, créez le repertoire <code>/home</code> et montez le à l&#39;aide de la commande suivante:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span>&nbsp;&nbsp;</span><span class="meta paragraph text"><span>mount&nbsp;-t&nbsp;nfs&nbsp;192.168.194.10:/srv/home/&lt;NomUtilisateur&gt;&nbsp;/home</span></span></span></div></pre><h1 id="client-debian">Client Debian</h1>
+<ul>
+<li>Pour créer et configurer votre machine debian, reportez vous au tutoriel d&#39;installation de la partie serveur.</li>
+</ul>
+<h2 id="configuration-du-ldap">Configuration du LDAP</h2>
+<ul>
+<li>Vérifiez qu&#39;avec la commande <code>id &lt;NomUtilisateur&gt;</code>, la commande vous renvoie bien <code>Not such user</code></li>
+<li>Installez les paquets <code>libnss-ldap libpam-ldap nscd</code></li>
+<li>Renseignez les valeurs suivantes:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>LDAP&nbsp;server&nbsp;URI:&nbsp;ldap://192.168.194.10/</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Distinguished&nbsp;name&nbsp;of&nbsp;the&nbsp;search&nbsp;base:&nbsp;dc=da2i,dc=org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>LDAP&nbsp;version&nbsp;to&nbsp;use:&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Does&nbsp;the&nbsp;LDAP&nbsp;database&nbsp;require&nbsp;login?&nbsp;No</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Special&nbsp;LDAP&nbsp;privileges&nbsp;for&nbsp;root?&nbsp;No</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Make&nbsp;the&nbsp;configuration&nbsp;file&nbsp;readable/writable&nbsp;by&nbsp;its&nbsp;owner&nbsp;only?&nbsp;No</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Allow&nbsp;LDAP&nbsp;admin&nbsp;account&nbsp;to&nbsp;behave&nbsp;like&nbsp;local&nbsp;root?&nbsp;Yes</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Make&nbsp;local&nbsp;root&nbsp;Database&nbsp;admin.&nbsp;No</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Does&nbsp;the&nbsp;LDAP&nbsp;database&nbsp;require&nbsp;login?&nbsp;No</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>LDAP&nbsp;administrative&nbsp;account:&nbsp;cn=admin,dc=da2i,dc=org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>LDAP&nbsp;administrative&nbsp;password:&nbsp;root</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>DLocal&nbsp;crypt&nbsp;to&nbsp;use&nbsp;when&nbsp;changing&nbsp;passwords.&nbsp;md5</span></span></span></div></pre><ul>
+<li>Si vous avez commis une erreur ou sauté une étape, vous pouvez reconfigurer les paquets avec <code>dpkg-reconfigure {paquet}</code></li>
+<li>Editez le fichier <code>/etc/libnss-ldap.conf</code> avec le contenu suivant:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>base&nbsp;dc=da2i,dc=org</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>uri&nbsp;ldap://192.168.194.10/</span></span></span></div></pre><ul>
+<li>Editez le fichier <code>/etc/nsswitch.conf</code> avec le contenu suivant pour activer le module LDAP NSS:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>passwd:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;files&nbsp;ldap</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>group:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;files&nbsp;ldap</span></span></span></div></pre><h3 id="configuration-du-pam">Configuration du PAM</h3>
+<ul>
+<li>Dans l&#39;étape qui suit, nous allons simplement modifier et/ou ajouter des valeurs à certains fichiers.</li>
+<li>Editez le fichier <code>/etc/pam.d/common-account</code> avec les informations suivantes:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>account&nbsp;[success=2&nbsp;new_authtok_reqd=done&nbsp;default=ignore]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_unix.so</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>account&nbsp;[success=1&nbsp;default=ignore]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_ldap.so</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>account&nbsp;requisite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_deny.so</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>account&nbsp;required&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_permit.so</span></span></span></div></pre><ul>
+<li>Editez le fichier <code>/etc/pam.d/common-auth</code> avec les informations suivantes:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>auth&nbsp;&nbsp;&nbsp;&nbsp;[success=2&nbsp;default=ignore]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_unix.so&nbsp;nullok_secure</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>auth&nbsp;&nbsp;&nbsp;&nbsp;[success=1&nbsp;default=ignore]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_ldap.so&nbsp;use_first_pass</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>auth&nbsp;&nbsp;&nbsp;&nbsp;requisite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_deny.so</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>auth&nbsp;&nbsp;&nbsp;&nbsp;required&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_permit.so</span></span></span></div></pre><ul>
+<li>Editez le fichier <code>/etc/pam.d/common-passwd</code> avec les informations suivantes:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[success=2&nbsp;default=ignore]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_unix.so&nbsp;obscure&nbsp;sha512</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[success=1&nbsp;user_unknown=ignore&nbsp;default=die]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_ldap.so&nbsp;use_authtok&nbsp;try_first_pass</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requisite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_deny.so</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_permit.so</span></span></span></div></pre><ul>
+<li>Editez le fichier <code>/etc/pam.d/common-session</code> avec les informations suivantes:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>session&nbsp;[default=1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_permit.so</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>session&nbsp;requisite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_deny.so</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>session&nbsp;required&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_permit.so</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>session&nbsp;required&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pam_unix.so</span></span></span></div></pre><ul>
+<li>Pour prendre en compte ces modifications, rebootez votre client à l&#39;aide de la commande <code>reboot</code>.</li>
+</ul>
+<h3 id="configuration-de-fstab">Configuration de fstab</h3>
+<ul>
+<li>Pour réussir à monter le disque <code>/srv/home</code> sur le client(qui permettra à chaque client d&#39;avoir son <code>/home</code>), modifiez le fichier <code>/etc/fstab</code> avec ces valeurs:</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>192.168.194.10:/srv/serveur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nfs4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;auto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</span></span></span></div></pre><ul>
+<li>N&#39;oubliez pas de supprimer la ligne suivante: <code>UUID=dd3a0110-1482-4592-8c95-3ba3ebfb8e84 /home           btrfs   defaults    $</code></li>
+</ul></body>
+</html>
