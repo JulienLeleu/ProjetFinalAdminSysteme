@@ -19,12 +19,6 @@
     - Configuration du LDAP et NSS
     - Configuration du PAM
     - Configuration du fstab
-  - Installations et configurations des Outils
-    - FireFox
-    - ThunderBird
-    - Libre Office
-    - Clavier Virtuel
-    - Loupe
 
 # Serveur
 ## Installation du serveur
