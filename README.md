@@ -13,12 +13,10 @@
     - LDAP
     - Serveur NFS
 - Le Client Debian
-  - Installation de la machine Debian
-  - Configuration de l'adresse IP
   - Installation et Configuration Montage NFS
-    - Configuration du LDAP et NSS
-    - Configuration du PAM
-    - Configuration du fstab
+  - Configuration du LDAP et NSS
+  - Configuration du PAM
+  - Configuration du fstab
 
 # Serveur
 ## Installation du serveur
