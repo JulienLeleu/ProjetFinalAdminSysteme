@@ -32,7 +32,7 @@
 
 Lancez l'installation avec VMWare.
 
-## Configuration
+## Configuration lors de l'installation
   - Lors de l'installation, respectez les paramètres suivants:
 
 ### Paramètres de la machine
@@ -53,7 +53,7 @@ Lancez l'installation avec VMWare.
 
 Installez automatiquement le disque dur(partitionnement automatique, fichiers multipliés avec repertoire /home séparé)
 
-## Configuration DNS
+### Configuration DNS
 
 Modifiez le fichier `/etc/network/interfaces` avec ces paramètres:
 
@@ -66,7 +66,7 @@ gateway 192.168.194.2
 ```
 Pour relancer la configuration rebootez la machine ou relancez le service à l'aide de la commande suivante: `/etc/init.d/networking restart`
 
-## Hostname
+### Hostname
 
   - Lancez la commande `echo "server" > /etc/hostname` pour changer le nom de l'hote
   - Editez le fichier `/etc/hosts` et remplacez cette ligne `127.0.0.1 server.XXXXX server` par `192.168.194.10 server.da2i.org server`
@@ -164,7 +164,7 @@ nameserver 192.168.194.10
 
 Redémarrez ensuite le service bind9.
 
-### Configuration de LDAP
+## Configuration de LDAP
 
   - Avant toute chose, installez les paquets `slapd ldap-utils`.
 Pour installer et configurer facilement LDAP, suivez le tutoriel du site http://uid.free.fr/Ldap/ldap.html
@@ -179,7 +179,7 @@ Pour installer et configurer facilement LDAP, suivez le tutoriel du site http://
 |Do you want the database to be removed when slapd is purged?|No|
 |Allow LDAPv2 protocol?|No|
 
-#### Création de l'arbre LDAP
+### Création de l'arbre LDAP
 
   - Créez le fichier `ou.ldif` dans le dossier `/var/tmp` et insérez le contenu ci-dessous:
 
@@ -194,7 +194,7 @@ objectClass: organizationalUnit
 ```
 
   - Effectuez la commande `invoke-rc.d slapd stop` pour eteindre le serveur suivi de `slapadd -c -v -l /var/tmp/ou.ldif` pour charger le fichier précédent.
-#### Création des utilisateurs
+### Création des utilisateurs
 
   - Pour cet exemple, nous appelerons cet utilisateur `robert`. Créez un fichier nommé `user1.ldif` dans le repertoire `/var/tmp` et y insérer le code suivant:
 
@@ -247,7 +247,7 @@ ldapdelete -c -x -D cn=admin,dc=da2i,dc=org -W "uid=robert,dc=da2i, dc=org"
 ldapdelete -c -x -D cn=admin,dc=da2i,dc=org -W "cn=robert,ou=groupes,dc=da2i, dc=org"
 ```
 
-### Serveur NFS
+## Serveur NFS
 
   - Installez le paquet `nfs-kernel-server`.
   - Editez le fichier `/etc/exports` avec le code suivant:
@@ -265,11 +265,11 @@ ldapdelete -c -x -D cn=admin,dc=da2i,dc=org -W "cn=robert,ou=groupes,dc=da2i, dc
   mount -t nfs 192.168.194.10:/srv/home/<NomUtilisateur> /home
 ```
 
-## Client Debian
+# Client Debian
 
   - Pour créer et configurer votre machine debian, reportez vous au tutoriel d'installation de la partie serveur.
 
-### Configuration du LDAP
+## Configuration du LDAP
 
   - Vérifiez qu'avec la commande `id <NomUtilisateur>`, la commande vous renvoie bien `Not such user`
   - Installez les paquets `libnss-ldap libpam-ldap nscd`
