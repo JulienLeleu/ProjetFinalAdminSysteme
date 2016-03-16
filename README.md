@@ -32,17 +32,17 @@
 
 Lancez l'installation avec VMWare.
 
-### Configuration
+## Configuration
   - Lors de l'installation, respectez les paramètres suivants:
 
-#### Paramètres de la machine
+### Paramètres de la machine
 
 |Parametre|valeur|
 |:----|:----|
 |**Nom de la machine**|server|
 |**Nom du domaine**|da2i.org|
 
-#### Miroir
+### Miroir
 
 |Parametre|valeur|
 |:----|:----|
@@ -53,7 +53,7 @@ Lancez l'installation avec VMWare.
 
 Installez automatiquement le disque dur(partitionnement automatique, fichiers multipliés avec repertoire /home séparé)
 
-### Configuration DNS
+## Configuration DNS
 
 Modifiez le fichier `/etc/network/interfaces` avec ces paramètres:
 
@@ -66,14 +66,14 @@ gateway 192.168.194.2
 ```
 Pour relancer la configuration rebootez la machine ou relancez le service à l'aide de la commande suivante: `/etc/init.d/networking restart`
 
-### Hostname
+## Hostname
 
   - Lancez la commande `echo "server" > /etc/hostname` pour changer le nom de l'hote
   - Editez le fichier `/etc/hosts` et remplacez cette ligne `127.0.0.1 server.XXXXX server` par `192.168.194.10 server.da2i.org server`
 
   Une fois les modifications effectuées, redémarrez le service `networking`
 
-### Bind9
+## Bind9
 
 Installez le paquet correspondant à **bind9** si celui-ci n'est pas déjà installé.
   - Editez le fichier `/etc/bind/named.conf.options`, insérez l'IP de VmPlayer et le DNS de l'université :
@@ -231,6 +231,22 @@ ldapadd -c -x -D cn=admin,dc=da2i,dc=org -W -f /var/tmp/user1.ldif
 ldappasswd -x -D cn=admin,dc=da2i,dc=org -W -S uid=vandenbm,ou=users,dc=da2i,dc=org
 ```
 
+### Suppression d'utilisateurs
+
+  - Si comme moi, il vous est arrivé malencontreusement de faire des erreurs lors de l'ajout d'un utilisateur, de faire une faute dans le nom ou encore d'oublier de changer le gid/uid pour chaque utilisateur, il existe une solution pour supprimer un utilisateur ainsi que son groupe.
+
+  - Pour supprimer un utilisateur, effectuez la commande suivante:
+
+```
+ldapdelete -c -x -D cn=admin,dc=da2i,dc=org -W "uid=robert,dc=da2i, dc=org"
+```
+
+- Pour supprimer son groupe, effectuez la commande suivante:
+
+```
+ldapdelete -c -x -D cn=admin,dc=da2i,dc=org -W "cn=robert,ou=groupes,dc=da2i, dc=org"
+```
+
 ### Serveur NFS
 
   - Installez le paquet `nfs-kernel-server`.
@@ -248,3 +264,102 @@ ldappasswd -x -D cn=admin,dc=da2i,dc=org -W -S uid=vandenbm,ou=users,dc=da2i,dc=
 ```
   mount -t nfs 192.168.194.10:/srv/home/<NomUtilisateur> /home
 ```
+
+## Client Debian
+
+  - Pour créer et configurer votre machine debian, reportez vous au tutoriel d'installation de la partie serveur.
+
+### Configuration du LDAP
+
+  - Vérifiez qu'avec la commande `id <NomUtilisateur>`, la commande vous renvoie bien `Not such user`
+  - Installez les paquets `libnss-ldap libpam-ldap nscd`
+  - Renseignez les valeurs suivantes:
+
+```
+LDAP server URI: ldap://192.168.194.10/
+Distinguished name of the search base: dc=da2i,dc=org
+LDAP version to use: 3
+Does the LDAP database require login? No
+Special LDAP privileges for root? No
+Make the configuration file readable/writable by its owner only? No
+Allow LDAP admin account to behave like local root? Yes
+Make local root Database admin. No
+Does the LDAP database require login? No
+LDAP administrative account: cn=admin,dc=da2i,dc=org
+LDAP administrative password: root
+DLocal crypt to use when changing passwords. md5
+```
+
+  - Si vous avez commis une erreur ou sauté une étape, vous pouvez reconfigurer les paquets avec `dpkg-reconfigure {paquet}`
+  - Editez le fichier `/etc/libnss-ldap.conf` avec le contenu suivant:
+
+```
+base dc=da2i,dc=org
+uri ldap://192.168.194.10/
+```
+
+  - Editez le fichier `/etc/nsswitch.conf` avec le contenu suivant pour activer le module LDAP NSS:
+
+```
+passwd:         files ldap
+group:          files ldap
+```
+
+### Configuration du PAM
+
+  - Dans l'étape qui suit, nous allons simplement modifier et/ou ajouter des valeurs à certains fichiers.
+  - Editez le fichier `/etc/pam.d/common-account` avec les informations suivantes:
+
+```
+account [success=2 new_authtok_reqd=done default=ignore]        pam_unix.so
+account [success=1 default=ignore]      pam_ldap.so
+
+account requisite                       pam_deny.so
+
+account required                        pam_permit.so
+```
+
+  - Editez le fichier `/etc/pam.d/common-auth` avec les informations suivantes:
+
+```
+auth    [success=2 default=ignore]      pam_unix.so nullok_secure
+auth    [success=1 default=ignore]      pam_ldap.so use_first_pass
+
+auth    requisite                       pam_deny.so
+
+auth    required                        pam_permit.so
+```
+
+  - Editez le fichier `/etc/pam.d/common-passwd` avec les informations suivantes:
+
+```
+password        [success=2 default=ignore]      pam_unix.so obscure sha512
+password        [success=1 user_unknown=ignore default=die]     pam_ldap.so use_authtok try_first_pass
+
+password        requisite                       pam_deny.so
+
+password        required                        pam_permit.so
+```
+  - Editez le fichier `/etc/pam.d/common-session` avec les informations suivantes:
+
+```
+session [default=1]                     pam_permit.so
+
+session requisite                       pam_deny.so
+
+session required                        pam_permit.so
+
+session required        pam_unix.so
+```
+
+  - Pour prendre en compte ces modifications, rebootez votre client à l'aide de la commande `reboot`.
+
+### Configuration de fstab
+
+- Pour réussir à monter le disque `/srv/home` sur le client(qui permettra à chaque client d'avoir son `/home`), modifiez le fichier `/etc/fstab` avec ces valeurs:
+
+```
+192.168.194.10:/srv/serveur 	/home 	nfs4 	auto 	0 	0
+```
+
+- N'oubliez pas de supprimer la ligne suivante: `UUID=dd3a0110-1482-4592-8c95-3ba3ebfb8e84 /home           btrfs   defaults    $`
