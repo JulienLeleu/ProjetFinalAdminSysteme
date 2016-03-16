@@ -11,13 +11,7 @@
     - Hostname
     - Bind9
     - LDAP
-      - Installation du Serveur LDAP
-      - Configuration de LDAP
-      - Créations de l'arbre LDAP
-      - Création d'utilisateurs
     - Serveur NFS
-      - Installation du Serveur NFS
-      - Test Montage NFS
 - Le Client Debian
   - Installation de la machine Debian
   - Configuration de l'adresse IP
@@ -34,12 +28,12 @@
 
 # Serveur
 ## Installation du serveur
-Dans un premier temps, munissez-vous du fichier mini-debian.iso disponible à l'adresse suivante : http://ftp.nl.debian.org/debian/dists/jessie/main/installer-amd64/current/images/netboot/
+  - Dans un premier temps, munissez-vous du fichier mini-debian.iso disponible à l'adresse suivante : http://ftp.nl.debian.org/debian/dists/jessie/main/installer-amd64/current/images/netboot/
 
 Lancez l'installation avec VMWare.
 
 ### Configuration
-Lors de l'installation, respectez les paramètres suivants:
+  - Lors de l'installation, respectez les paramètres suivants:
 
 #### Paramètres de la machine
 
@@ -172,7 +166,7 @@ Redémarrez ensuite le service bind9.
 
 ### Configuration de LDAP
 
-Avant toute chose, installez les paquets `slapd ldap-utils`.
+  - Avant toute chose, installez les paquets `slapd ldap-utils`.
 Pour installer et configurer facilement LDAP, suivez le tutoriel du site http://uid.free.fr/Ldap/ldap.html
 
 |**Paramètres**|valeur|
@@ -200,3 +194,57 @@ objectClass: organizationalUnit
 ```
 
   - Effectuez la commande `invoke-rc.d slapd stop` pour eteindre le serveur suivi de `slapadd -c -v -l /var/tmp/ou.ldif` pour charger le fichier précédent.
+#### Création des utilisateurs
+
+  - Pour cet exemple, nous appelerons cet utilisateur `robert`. Créez un fichier nommé `user1.ldif` dans le repertoire `/var/tmp` et y insérer le code suivant:
+
+```
+dn: cn=robert,ou=groupes,dc=da2i,dc=org
+cn: robert
+gidNumber: 1001
+objectClass: top
+objectClass: posixGroup
+
+dn: uid=robert,ou=users,dc=da2i,dc=org
+uid: robert
+uidNumber: 1001
+gidNumber: 1001
+cn: robert
+sn: robert
+objectClass: top
+objectClass: person
+objectClass: posixAccount
+objectClass: shadowAccount
+loginShell: /bin/bash
+homeDirectory: /home/robert
+```
+
+  - Ensuite, pour l'ajouter au serveur LDAP, effectuez la commande:
+
+```
+ldapadd -c -x -D cn=admin,dc=da2i,dc=org -W -f /var/tmp/user1.ldif
+```
+
+  - Définissez lui un mot de passe, avec la commande:
+
+```
+ldappasswd -x -D cn=admin,dc=da2i,dc=org -W -S uid=vandenbm,ou=users,dc=da2i,dc=org
+```
+
+### Serveur NFS
+
+  - Installez le paquet `nfs-kernel-server`.
+  - Editez le fichier `/etc/exports` avec le code suivant:
+
+```
+/srv/serveur *.da2i.org(rw,sync,no_subtree_check)
+```
+
+  - (Re) Lancez le service `nfs-kernel-server`
+  - Sur le serveur, créez le repertoire `/srv/home` qui contiendra les dossiers home de tous les utilisateurs LDAP
+  - Pour chaque utilisateur, créez un repertoire `/srv/home/<NomUtilisateur>`
+  - Sur le client, créez le repertoire `/home` et montez le à l'aide de la commande suivante:
+
+```
+  mount -t nfs 192.168.194.10:/srv/home/<NomUtilisateur> /home
+```
