@@ -72,8 +72,8 @@ Installez le paquet correspondant à **bind9** si celui-ci n'est pas déjà inst
 
 ```
 forwarders {
-	192.168.194.2; 	#IP de vmPlayer
-	172.18.48.31;	#DNS Universite
+	192.168.194.2;
+	172.18.48.31;
 };
 dnssec-validation no; #A modifier dans le fichier
 ```
