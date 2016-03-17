@@ -230,7 +230,7 @@ ldappasswd -x -D cn=admin,dc=da2i,dc=org -W -S uid=robert,ou=users,dc=da2i,dc=or
   - Pour supprimer un utilisateur, effectuez la commande suivante:
 
 ```
-ldapdelete -c -x -D cn=admin,dc=da2i,dc=org -W "uid=robert,dc=da2i, dc=org"
+ldapdelete -c -x -D cn=admin,dc=da2i,dc=org -W "uid=robert,ou=users,dc=da2i,dc=org"
 ```
 
 - Pour supprimer son groupe, effectuez la commande suivante:
